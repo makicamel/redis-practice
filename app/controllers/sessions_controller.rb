@@ -24,6 +24,7 @@ class SessionsController < ApplicationController
   end
 
   def sign_out
+    @current_user = nil
     session.delete
     reset_session
   end
