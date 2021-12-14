@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :authentecate_user!
+
   def new; end
 
   def create
