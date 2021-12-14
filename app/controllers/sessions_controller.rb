@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user&.authenticate(params[:session][:password])
       sign_in(user)
-      # redirect_to foo_path
+      redirect_to items_path
     else
       flash[:error] = 'Wrong email or password'
       render :new
