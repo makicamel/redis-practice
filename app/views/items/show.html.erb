@@ -1,0 +1,11 @@
+<header>
+  <%= "Hello, #{current_user.name}" %>
+</header>
+
+<div>
+  <%= @item.id %>
+  <%= @item.name %>
+  <%= "#{@item.price.to_s(:delimited)}円" %>
+</div>
+
+<%= link_to :back, items_path %>

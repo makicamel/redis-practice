@@ -1,0 +1,17 @@
+<header>
+  <%= "Hello, #{current_user.name}" %>
+</header>
+
+<div>
+  <table>
+    <tbody>
+      <% @items.each do |item| %>
+        <tr>
+          <%= tag.td item.id %>
+          <%= tag.td link_to item.name, item %>
+          <%= tag.td "#{item.price.to_s(:delimited)}円" %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
